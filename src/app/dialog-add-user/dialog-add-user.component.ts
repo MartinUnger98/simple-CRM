@@ -9,7 +9,10 @@ import { User } from 'src/models/user.class';
 export class DialogAddUserComponent {
   user: User = new User;
 
+  birthDate!: Date;
+
   saveUser() {
+    this.user.birthDate = this.birthDate.getTime();
     console.log('Current user is', this.user);
   }
 }
